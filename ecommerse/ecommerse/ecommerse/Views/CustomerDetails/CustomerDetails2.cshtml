@@ -1,0 +1,38 @@
+﻿@model ecommerse.Models.CustomerDetail
+
+@{
+    ViewData["Title"] = "CustomerDetails2";
+
+}
+
+
+<div class="retailer-profile">
+<div>
+    <h4>CustomerDetail</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNum)
+        </dd>        
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary m-2" asp-action="Edit" asp-route-id="@Model?.CustId">Edit</a> |
+    <a class="btn btn-primary m-2" asp-action="HomeIndex" asp-controller="Home">Back to Home</a>
+</div>
+</div>

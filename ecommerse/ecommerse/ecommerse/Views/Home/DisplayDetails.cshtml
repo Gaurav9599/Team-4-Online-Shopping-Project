@@ -1,0 +1,38 @@
+﻿@model ecommerse.Models.ProductDetail
+
+@{
+    ViewData["Title"] = "DisplayDetails";
+}
+
+<div class="retailer-profile">
+<h1>DisplayDetails</h1>
+
+<div class="container-fluid">
+    <div class="row">
+            <div class="col-md-3" >
+                <div class="card">                    
+                    <div class="card-body">
+                        <img src="~/images/@Html.DisplayFor(model => model.Images)" height="150" width="200"/> <br/>                       
+                    </div>
+                    <div class="card-header">
+                       <p> @Html.DisplayFor(model => model.ProductId) </p>
+                    </div>
+                    <div class="card-header">
+                       <p> @Html.DisplayFor(model => model.ProductName) </p>
+                    </div>
+                     <p> price : @Html.DisplayFor(model => model.ProductPrice)</p>  
+                     <p> Brand : @Html.DisplayFor(model => model.ProductBrand)</p>
+                     <p> Ratings : @Html.DisplayFor(model => model.Ratings)</p>
+                     <p> Fabric : @Html.DisplayFor(model => model.Fabric)</p>
+                </div>
+            </div>
+    </div>
+</div>
+<div>
+    <a class="btn btn-primary m-2" asp-action="HomeIndex">Back to Home</a>
+</div>
+<div>
+    <a class="btn btn-primary m-2" asp-action="Create" asp-controller="Carts">Wishlist</a>
+</div>
+</div>
+

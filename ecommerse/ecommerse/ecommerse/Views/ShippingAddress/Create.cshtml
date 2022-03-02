@@ -1,0 +1,50 @@
+﻿@model ecommerse.Models.ShippingAddress
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ShippingAddress</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Village" class="control-label"></label>
+                <input asp-for="Village" class="form-control" />
+                <span asp-validation-for="Village" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Landmark" class="control-label"></label>
+                <input asp-for="Landmark" class="form-control" />
+                <span asp-validation-for="Landmark" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pincode" class="control-label"></label>
+                <input asp-for="Pincode" class="form-control" />
+                <span asp-validation-for="Pincode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="submit" class="btn btn-primary m-2" />
+            </div>
+        </form>
+      
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

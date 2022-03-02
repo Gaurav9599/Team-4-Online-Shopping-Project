@@ -1,0 +1,73 @@
+﻿@model ecommerse.Models.Retailer
+
+@{
+    Layout = "~/Views/Shared/_LayoutLogIn.cshtml";
+}
+
+<div class="full-page">
+    
+<hr />
+<div class="row">
+    <div class="col-12 m-2">
+    <h1  style="color:white">Retailer Register</h1>
+    </div>
+    <div class="col-md-4">       
+        <form asp-action="RetailerRegister">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RetailerName" class="control-label"></label>
+                <input asp-for="RetailerName" class="form-control" />
+                <span asp-validation-for="RetailerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RetailerEmail" class="control-label"></label>
+                <input asp-for="RetailerEmail" class="form-control" />
+                <span asp-validation-for="RetailerEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RetailerPhoneNum" class="control-label"></label>
+                <input asp-for="RetailerPhoneNum" class="form-control" />
+                <span asp-validation-for="RetailerPhoneNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pincode" class="control-label"></label>
+                <input asp-for="Pincode" class="form-control" />
+                <span asp-validation-for="Pincode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductType" class="control-label"></label>
+                <input asp-for="ProductType" class="form-control" />
+                <span asp-validation-for="ProductType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary m-2" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

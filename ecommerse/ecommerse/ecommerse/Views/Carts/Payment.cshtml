@@ -1,0 +1,25 @@
+﻿@model ecommerse.Models.Cart
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="retailer-profile">
+<h1> Payment </h1>
+<p> Total Price : @Model.TotalPrice</p>
+<h2> Payment Mode :</h2>
+<div class="m-2">
+        <input type="radio" name="payment" id="gpay" value="gpay" checked />
+          <label for="gpay">Gpay</label>
+          <input type="radio" name="payment" id="PhonePay" value="phonepay" class="ml-2" />
+          <label for="PhonePay">PhonePay</label>
+          <input type="radio" name="payment" id="PayTm" value="paytm" class="ml-2" />
+          <label for="PayTm">PayTm</label>
+          <input type="radio" name="payment" id="COD" value="cod" class="ml-2"/>
+          <label for="COD">COD</label>
+</div>
+ <div>
+      <a class="btn btn-primary m-2" asp-action="Create" asp-controller="ShippingAddress"> Add Address </a>
+</div>
+</div>

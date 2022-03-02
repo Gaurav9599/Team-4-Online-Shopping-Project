@@ -1,0 +1,79 @@
+﻿@model IEnumerable<AdminFinal.Models.ProductDetail>
+
+@{
+    ViewData["Title"] = "ProductsList";
+}
+<div class="admin-profile">
+<h1>Products List</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductBrand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fabric)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ratings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Images)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Retailer)
+            </th>            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductBrand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fabric)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ratings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Images)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RetailerId)
+            </td>            
+        </tr>
+}
+    </tbody>
+</table>
+<div>
+    <a class="btn btn-primary m-2" asp-action="Index2" asp-controller="Home">Back to home</a>
+</div>
+</div>

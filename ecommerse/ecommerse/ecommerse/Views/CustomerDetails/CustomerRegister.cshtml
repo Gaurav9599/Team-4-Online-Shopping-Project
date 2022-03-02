@@ -1,0 +1,48 @@
+﻿@model ecommerse.Models.CustomerDetail
+
+@{
+    Layout = "~/Views/Shared/_LayoutLogIn.cshtml";
+}
+
+<div class="full-page">
+    
+<hr />
+<div class="row">
+     <div class="col-12 m-2">
+    <h1  style="color:white">Customer Registration</h1>
+    </div>
+    <div class="col-md-4">
+        <form asp-action="CustomerRegister">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CustName" class="control-label"></label>
+                <input asp-for="CustName" class="form-control" />
+                <span asp-validation-for="CustName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNum" class="control-label"></label>
+                <input asp-for="PhoneNum" class="form-control" />
+                <span asp-validation-for="PhoneNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary m-2" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

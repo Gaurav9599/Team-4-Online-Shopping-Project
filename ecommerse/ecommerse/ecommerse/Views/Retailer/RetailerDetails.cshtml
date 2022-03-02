@@ -1,0 +1,80 @@
+﻿@model ecommerse.Models.Retailer
+
+@{
+    ViewData["Title"] = "RetailerDetails";
+}
+
+
+
+
+<div class="retailer-profile">
+    <div>
+    <h4>My Profile</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RetailerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RetailerName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RetailerEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RetailerEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RetailerPhoneNum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RetailerPhoneNum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.State)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pincode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pincode)
+        </dd>       
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProductType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ApprovedStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ApprovedStatus)
+        </dd>        
+    </dl>
+</div>
+<div>
+    <p> You cannot add product until your approved status has changed to true.</p>
+    @if(Model.ApprovedStatus == true)
+    {
+        <a class="btn btn-primary" asp-action="Create"  asp-controller="ProductDetails">Add Products</a>
+    }
+    <a class="m-2 btn btn-primary" asp-action="HomeIndex" asp-controller="Home">Home</a>
+    <a class="m-2 btn btn-primary" asp-action="EditRetailer" asp-route-id="@Model.RetailerId">Edit My Details</a>
+</div>
+</div>

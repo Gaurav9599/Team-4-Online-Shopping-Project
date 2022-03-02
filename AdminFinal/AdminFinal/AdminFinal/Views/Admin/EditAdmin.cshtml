@@ -1,0 +1,49 @@
+﻿@model AdminFinal.Models.Admin
+
+@{
+    ViewData["Title"] = "EditAdmin";
+}
+
+<div class="full-page">
+    
+<hr />
+<div class="row">
+    <div class="col-12 m-2">
+    <h1  style="color:white">Edit your details</h1>
+    </div>
+    <div class="col-md-4">
+        <div class="page">
+        <form asp-action="EditAdmin">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AdminId" />
+            <div class="form-group">
+                <label asp-for="AdminName" class="control-label"></label>
+                <input asp-for="AdminName" class="form-control" />
+                <span asp-validation-for="AdminName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdminEmail" class="control-label"></label>
+                <input asp-for="AdminEmail" class="form-control" />
+                <span asp-validation-for="AdminEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdminPhoneNum" class="control-label"></label>
+                <input asp-for="AdminPhoneNum" class="form-control" />
+                <span asp-validation-for="AdminPhoneNum" class="text-danger"></span>
+            </div>          
+            <div class="form-group">
+                <input type="submit" value="Save" class="button" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-action="AdmList">Back to Admin List</a>
+</div>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

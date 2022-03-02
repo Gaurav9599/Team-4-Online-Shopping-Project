@@ -1,0 +1,26 @@
+﻿@model IEnumerable<AdminFinal.Models.ProductDetail>;
+
+
+
+<div class="wcu-section pt-5 pb-5">
+    <div class="container">
+    <div class="row">
+    <div class="col-12">
+    <h1 class="wcu-section-heading">Top Products</h1>
+    </div>
+
+    @foreach(var item in Model)
+    {
+        <div class="mb-3 col-md-4" onclick="window.location.href='Home/DisplayDetails/@item.ProductId'" >
+        <div class="text-center">
+        <img src="~/images/@item.Images" height="150" width="200" />
+        </div>
+        <div class="product-display wcu-card">
+        <h1 class="wcu-card-title mt-3"> @item.ProductName </h1>
+        <p class="wcu-card-description"> price:@item.ProductPrice </p>
+        </div>
+        </div>
+    }​​
+</div>
+</div>
+</div>

@@ -1,0 +1,229 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.full-page {
+    height: 100%;
+    width: 80%;
+    background-image: url('../images/LogInBg5.jpeg');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.page {
+    text-align: center;
+    font-size: 20px;
+    width: 200px;
+    color: lightgrey;
+    width: 350px;
+    height: 450px;
+    position: relative;
+    margin: 2% auto;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    min-width: 80px;
+    padding: 10px;
+    height:40px;
+    font-size:15px;
+    cursor: pointer;
+    display: inline;
+    margin: 10px;
+    background: #F3C693;
+    border: 0;
+    outline: none;
+    border-radius: 8px;
+}
+
+
+
+.about {
+    width: 100px;
+    height: 100px;
+}
+
+.heading {
+    color: green;
+    /*margin-bottom: px;*/
+}
+
+.AdmRegister {
+    background-color: darkgray;
+    height: 100vh;
+    background-size: cover;
+}
+
+.carousel-images {
+    height: 400px;
+}
+.error-msg-bg {
+    background-color: #b4c1ed;
+    height: 100vh;
+    padding: 20px;
+}
+.error-msg {
+    color: red;
+    font-size: 20px;
+}
+.wcu-section {
+    background-color: #add9d4;
+    height: 100vh;
+}
+
+.wcu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+.admin-profile {
+    padding: 15px;
+    background-color: #dae899;
+    height: 100vh;
+}
+
+.wcu-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.wcu-card {
+    text-align: center;
+    background-color: white;
+    margin-right: 104px;
+    margin-left: 104px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5eaf4;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.wcu-card-image {
+    width: 300px;
+    height: 300px;
+}
+
+.wcu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.wcu-card-description {
+    color: #7b8794;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+
+.product-display {
+    text-align: center;
+}
+
+.admin-pr {
+    color: cyan;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.admin-div {
+    background-color: darkcyan;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+}
+
+.table, th, td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+}
+
+.add-retailer-button {
+    width: 150px;
+    height: 50px;
+}
+
+.retailer-design {
+    background-color: bisque;
+    padding: 10px;
+    margin: 15px;
+    color: brown;
+    font-size: 17px;
+    width: 200px;
+    text-align: center;
+}
+
+.add-retailer-heading {
+    color: #75ebc3;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.add-retailer-container {
+    background-color: #0c405e;
+    height: 100vh;
+    background-size: cover;
+}
+
+.submit-retailer {
+    background-color: #d5d689;
+    height: 50px;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    color: #3c7785;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-bg {
+    background-color: darkcyan;
+}
+
+.form-heading {
+    font-family: "Roboto";
+    font-size: 36px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-family: "Roboto";
+    font-size: 14px;
+}

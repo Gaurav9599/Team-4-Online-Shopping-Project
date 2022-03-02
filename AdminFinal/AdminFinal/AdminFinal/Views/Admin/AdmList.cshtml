@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AdminFinal.Models.Admin>
+
+@{
+    ViewData["Title"] = "AdmList";
+}
+
+<div class="admin-profile">
+<h1>AdmList</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminPhoneNum)
+            </th>         
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminPhoneNum)
+            </td>                  
+        </tr>
+}
+    </tbody>
+</table>
+<div>
+    <a class="btn btn-primary m-2" asp-action="Index2" asp-controller="Home">Back to home</a>
+</div>
+
+</div>

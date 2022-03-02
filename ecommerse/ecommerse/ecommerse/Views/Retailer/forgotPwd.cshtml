@@ -1,0 +1,40 @@
+﻿@model ecommerse.ViewModel.ForgotPwd;
+@{
+    ViewData["Title"] = "Change password";
+    Layout = "~/Views/Shared/_LayoutLogIn.cshtml";
+}
+
+<div class="full-page">
+    
+<hr />
+<div class="row">
+    <div class="col-12 m-2">
+    <h1  style="color:white">Change Password</h1>
+    </div>
+    <div class="col-md-4">
+        <div class="page">
+        <form asp-action="forgotPwd">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" placeholder="Eg: satya@gmail.com" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="NewPassword" class="control-label"></label>
+                <input asp-for="NewPassword" type="password" class="form-control" />
+                <span asp-validation-for="NewPassword" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="button" />
+            </div>
+            </form>
+      </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,38 @@
+﻿@model AdminFinal.Models.Retailer
+
+@{
+    ViewData["Title"] = "Approve Retailer";
+}
+
+<div class="full-page">
+    
+<hr />
+<div class="row">
+    <div class="col-12 m-2">
+    <h1  style="color:white">Approve Retailer</h1>
+    </div>
+    <div class="col-md-4">
+        <div class="page">
+        <form asp-action="EditRetailer">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RetailerId" />          
+            <div class="form-group">
+                <label asp-for="ApprovedStatus" class="control-label"></label>
+                <input asp-for="ApprovedStatus" class="form-control" />
+                <span asp-validation-for="ApprovedStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="button" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-action="AdminRetailer">Back to Retailer List</a>
+</div>
+</div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

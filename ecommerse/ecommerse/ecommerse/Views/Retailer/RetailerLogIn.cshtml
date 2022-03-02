@@ -1,0 +1,43 @@
+﻿@model ecommerse.ViewModel.LogInVM
+
+@{
+    Layout = "~/Views/Shared/_LayoutLogIn.cshtml";
+}
+
+<div class="full-page">
+    
+<hr />
+<div class="row">
+    <div class="col-12 m-2">
+    <h1  style="color:white">Retailer Log In</h1>
+    </div>
+    <div class="col-md-4">
+        <div class="page">
+        <form asp-action="LogInValidations">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">             
+                <input asp-for="Email" class="form-control" size="60" placeholder="Eg: satya@gmail.com" />
+                <span asp-validation-for="Email" class="text-danger"></span><br>
+            </div>
+             <div class="form-group">            
+                <input asp-for="password" type="password" class="form-control" size="80" placeholder="password"/>
+                <span asp-validation-for="password"  class="text-danger"></span><br><br>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="LogIn" class="button" />
+                <button class="button"  onclick="window.location.href='RetailerRegister'"> Register </button><br>
+                <button class="button"  onclick="window.location.href='forgotPwd'"> Forgot password ? </button>
+       
+            </div>
+            </form>         
+      </div>
+      </div>
+</div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

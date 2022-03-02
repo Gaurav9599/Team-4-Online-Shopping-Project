@@ -1,0 +1,37 @@
+﻿@model AdminFinal.Models.Admin
+
+@{
+    ViewData["Title"] = "Admin Profile";
+}
+
+
+
+<div class="admin-profile">    
+    <h1>My Profile</h1>
+        <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdminName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdminName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdminEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdminEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdminPhoneNum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdminPhoneNum)
+        </dd>       
+    </dl>
+    <div>
+    <a class="btn btn-primary m-2" asp-action="EditAdmin" asp-route-id="@Model?.AdminId">Edit</a> |
+    <a class="btn btn-primary m-2" asp-action="Index2" asp-controller="Home">Back to Home</a>   
+</div>
+</div>
+
